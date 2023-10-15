@@ -1,12 +1,175 @@
 ---
+import { Icon } from "astro-icon";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Vecsernyés András">
-  <header></header>
-  <main>
-    <section></section>
-    <section></section>
+  <nav
+    class="flex flex-col lg:flex-row items-center absolute gap-1 lg:gap-4 lg:top-0 lg:left-0 w-full bg-black lg:bg-transparent md:bg-transparent md:opacity-100 opacity-0 top-[-400px] transition-all duration-500 text-white pt-12 lg:pt-0 lg:px-12 text-2xl font-poppins"
+  >
+    <img src="logo.png" alt="icon" class="hidden md:hidden lg:block h-36" />
+    <a
+      href="#rolam"
+      class="hover:text-gray transition-all duration-300 p-2 lg:p-0">Rólam</a
+    >
+    <a
+      href="#kepessegek"
+      class="hover:text-gray transition-all duration-300 p-2 lg:p-0"
+      >Képességek</a
+    >
+    <a
+      href="#tapasztalat"
+      class="hover:text-gray transition-all duration-300 p-2 lg:p-0"
+      >Tapasztalat</a
+    >
+    <a href="" class="hover:text-gray transition-all duration-300 p-2 lg:p-0"
+      >Portfólió</a
+    >
+    <a href="" class="hover:text-gray transition-all duration-300 p-2 lg:p-0"
+      >Kapcsolat</a
+    >
+  </nav>
+  <header
+    class="h-max lg:h-screen lg:bg-[url('/me.webp')] bg-black bg-cover flex flex-col lg:justify-center text-white m-0 lg:text-2xl font-poppins"
+  >
+    <div class="grid p-8 lg:p-24">
+      <Icon
+        name="menu-outline"
+        class="h-8 md:hidden block cursor-pointer justify-self-end"
+        data-component="menu"
+      />
+      <div
+        class="flex flex-col gap-6 items-center lg:items-start text-center lg:text-left mt-10 lg:mt-0"
+      >
+        <div class="rounded block lg:hidden select-none">
+          <img src="profile.webp" alt="profile picture" class="h-48" />
+        </div>
+        <h1 class="text-4xl lg:text-9xl lg:w-1/2 leading-tight font-semibold">
+          Vecsernyés<br /><span class="text-elegant">András</span>
+        </h1>
+        <p class="text-gray text-xl lg:text-2xl">
+          Szenvedélyeim a webfejlesztés az extrém sportok és a testépités.
+        </p>
+        <div class="flex flex-row gap-6 text-gray">
+          <a href="https://www.facebook.com/andras.vecsernyes/" target="_blank"
+            ><Icon
+              name="baseline-facebook"
+              class="h-10 transition-all ease-in duration-300 hover:scale-125"
+              onclick="topFunction()"
+            /></a
+          >
+          <a href="https://www.instagram.com/vecsernyes.andras/" target="_blank"
+            ><Icon
+              name="instagram"
+              class="h-10 transition-all ease-in duration-300 hover:scale-125"
+            /></a
+          >
+          <a href="mailto:vecsernyesan2002@gmail.com" target="_blank"
+            ><Icon
+              name="baseline-email"
+              class="h-10 transition-all ease-in duration-300 hover:scale-125"
+            /></a
+          >
+        </div>
+      </div>
+      <div class="flex flex-col items-end p-8">
+        <a href=""><Icon name="up-c" id="up" class="h-10 fixed"/></a>
+      </div>
+    </div>
+  </header>
+  <main class="bg-elegantGray">
+    <section class="p-8 h-auto">
+      <div class="flex flex-col items-center justify-center text-center" id="rolam">
+        <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">Rólam</h1>
+        <h1 class="text-4xl lg:text-6xl text-white">Rólam</h1>
+      </div>
+      <div class="mt-32 text-white text-center lg:text-left">
+        <h1 class="text-2xl lg:text-4xl">Személyes adatok</h1>
+        <div class="flex flex-row mt-8 gap-1 lg:gap-16 text-sm lg:text-lg">
+          <table>
+            <tr class="leading-normal lg:leading-loose">
+              <td class="text-gray">Keresztnév:</td>
+              <td>András</td>
+            </tr>
+            <tr class="leading-normal lg:leading-loose">
+              <td class="text-gray">Születési idő:</td>
+              <td>2002.01.27</td>
+            </tr>
+            <tr class="leading-normal lg:leading-loose">
+              <td class="text-gray">Telefon:</td>
+              <td> +36 20 960 7403</td>
+            </tr>
+          </table>
+          <table class="">
+            <tr class="leading-normal lg:leading-loose">
+              <td class="text-gray">Vezetéknév:</td>
+              <td>Vecsernyés</td>
+            </tr>
+            <tr class="leading-normal lg:leading-loose">
+              <td class="text-gray">Nemzetiség:</td>
+              <td>Magyar</td>
+            </tr>
+            <tr class="leading-normal lg:leading-loose">
+              <td class="text-gray">E-mail:</td>
+              <td class="">vecsernyesan2002<br/>@gmail.com</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="p-8 mt-20 h-screen" id="kepessegek">
+      <div class="flex flex-col items-center justify-center text-center">
+        <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">Képességek</h1>
+        <h1 class="text-4xl lg:text-6xl text-white">Képességek</h1>
+      </div>
+    </section>
+    <section class="p-8 mt-20 h-screen" id="tapasztalat">
+      <div class="flex flex-col items-center justify-center text-center">
+        <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">
+          Tanulmányok és tapasztalat
+        </h1>
+        <h1 class="text-4xl lg:text-6xl text-white">Tanulmányok és tapasztalat</h1>
+      </div>
+    </section>
   </main>
   <footer></footer>
+
+  <script is:inline>
+  //menu functions start here
+  let isMenuOpen = false;
+  function Menu(e) {
+    let list = document.querySelector("nav");
+    isMenuOpen
+      ? ((e.name = "menu-outline"),
+        list.classList.remove("top-[80px]"),
+        list.classList.remove("opacity-100"))
+      : ((e.name = "close"),
+        list.classList.add("top-[80px]"),
+        list.classList.add("opacity-100"));
+    isMenuOpen = !isMenuOpen;
+  }
+  document
+    .querySelector("[data-component='menu']")
+    .addEventListener("click", function () {
+      Menu(this);
+    });
+  //scroll functions start here
+  let up = document.getElementById("up");
+  window.onscroll = function () {
+    scrollFunction();
+  };
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      up.style.display = "block";
+    } else {
+      up.style.display = "none";
+    }
+  }
+  function topFunction() {
+    window.scrollTo(0,0);
+  }
+  </script>
 </Layout>
