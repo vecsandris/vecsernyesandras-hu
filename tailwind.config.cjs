@@ -8,7 +8,8 @@ module.exports = {
 				gray: '#6B6B6B',
 				elegant: '#dc2626',
 				black: '#000000',
-				elegantGray: '#121212'
+				elegantGray: '#121212',
+				red: '#DC2626'
 			},
 			fontFamily:{
 				poppins: ['"Poppins"']

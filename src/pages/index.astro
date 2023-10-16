@@ -44,10 +44,10 @@ import Layout from "../layouts/Layout.astro";
         <div class="rounded block lg:hidden select-none">
           <img src="profile.webp" alt="profile picture" class="h-48" />
         </div>
-        <h1 class="text-4xl lg:text-9xl lg:w-1/2 leading-tight font-semibold">
+        <h1 class="text-4xl lg:text-8xl lg:w-1/2 leading-tight font-semibold">
           Vecsernyés<br /><span class="text-elegant">András</span>
         </h1>
-        <p class="text-gray text-xl lg:text-2xl">
+        <p class="text-gray text-xl lg:text-2xl w-1/2">
           Szenvedélyeim a webfejlesztés az extrém sportok és a testépités.
         </p>
         <div class="flex flex-row gap-6 text-gray">
@@ -78,13 +78,19 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </header>
   <main class="bg-elegantGray">
-    <section class="p-8 h-auto">
-      <div class="flex flex-col items-center justify-center text-center" id="rolam">
-        <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">Rólam</h1>
+    <section class="p-4 h-auto">
+      <div
+        class="flex flex-col items-center justify-center text-center"
+        id="rolam"
+      >
+        <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">
+          Rólam
+        </h1>
         <h1 class="text-4xl lg:text-6xl text-white">Rólam</h1>
       </div>
-      <div class="mt-32 text-white text-center lg:text-left">
-        <h1 class="text-2xl lg:text-4xl">Személyes adatok</h1>
+      <div class="flex flex-col mt-16 text-white text-center lg:text-left items-center">
+        <p class="text-justify p-4 w-full lg:w-1/2">Sziasztok, Vecsernyés András vagyok! Egy lelkes és kreatív egyéniség vagyok, aki mindig nyitott az új kihívásokra és tapasztalatokra. Az emberekkel való kapcsolatépítés és az új barátok szerzése fontos számomra, mert hiszem, hogy az emberek sokat tanulhatnak egymástól. Bízom benne, hogy a jövőben még sok érdekes dolog vár rám, és nagyon várom, hogy megosszam tapasztalataimat és gondolataimat másokkal.</p>
+        <h1 class="text-2xl lg:text-4xl mt-16">Személyes adatok</h1>
         <div class="flex flex-row mt-8 gap-1 lg:gap-16 text-sm lg:text-lg">
           <table>
             <tr class="leading-normal lg:leading-loose">
@@ -111,7 +117,7 @@ import Layout from "../layouts/Layout.astro";
             </tr>
             <tr class="leading-normal lg:leading-loose">
               <td class="text-gray">E-mail:</td>
-              <td class="">vecsernyesan2002<br/>@gmail.com</td>
+              <td class="">vecsernyesan2002<br />@gmail.com</td>
             </tr>
           </table>
         </div>
@@ -119,16 +125,86 @@ import Layout from "../layouts/Layout.astro";
     </section>
     <section class="p-8 mt-20 h-screen" id="kepessegek">
       <div class="flex flex-col items-center justify-center text-center">
-        <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">Képességek</h1>
+        <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">
+          Képességek
+        </h1>
         <h1 class="text-4xl lg:text-6xl text-white">Képességek</h1>
       </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16 text-white p-8 justify-items-center">
+        <div class="text-center">
+          <div class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4">
+            <div class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center">
+                <p class="text-lg lg:text-2xl">40%</p>
+            </div>
+        </div>
+        <p class="text-lg lg:text-2xl mt-5">CSS</p>
+        </div>
+        <div class="flex flex-col text-center">
+          <div class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4">
+            <div class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center">
+                <p class="text-lg lg:text-2xl">50%</p>
+            </div>
+        </div>
+        <p class="text-lg lg:text-2xl mt-5">REACT</p>
+        </div>
+        <div class="flex flex-col text-center">
+          <div class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4">
+            <div class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center">
+                <p class="text-lg lg:text-2xl">50%</p>
+            </div>
+        </div>
+        <p class="text-lg lg:text-2xl mt-5">ASTRO</p>
+        </div>
+        <div class="flex flex-col text-center">
+          <div class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4">
+            <div class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center">
+                <p class="text-lg lg:text-2xl">50%</p>
+            </div>
+        </div>
+        <p class="text-lg lg:text-2xl mt-5">Tailwind CSS</p>
+        </div>
+        <div class="flex flex-col text-center">
+          <div class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4">
+            <div class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center">
+                <p class="text-lg lg:text-2xl">90%</p>
+            </div>
+        </div>
+        <p class="text-lg lg:text-2xl mt-5">Github</p>
+        </div>
+        <div class="flex flex-col text-center">
+          <div class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4">
+            <div class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center">
+                <p class="text-lg lg:text-2xl">90%</p>
+            </div>
+        </div>
+        <p class="text-lg lg:text-2xl mt-5">Mysql</p>
+        </div>
+        <div class="flex flex-col text-center">
+          <div class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4">
+            <div class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center">
+                <p class="text-lg lg:text-2xl">60%</p>
+            </div>
+        </div>
+        <p class="text-lg lg:text-2xl mt-5">MongoDB</p>
+        </div>
+        <div class="flex flex-col text-center">
+          <div class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4">
+            <div class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center">
+                <p class="text-lg lg:text-2xl">70%</p>
+            </div>
+        </div>
+        <p class="text-lg lg:text-2xl mt-5">Figma</p>
+        </div>
+      </div>
     </section>
-    <section class="p-8 mt-20 h-screen" id="tapasztalat">
+    <section class="p-8 mt-40 h-screen" id="tapasztalat">
       <div class="flex flex-col items-center justify-center text-center">
         <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">
           Tanulmányok és tapasztalat
         </h1>
-        <h1 class="text-4xl lg:text-6xl text-white">Tanulmányok és tapasztalat</h1>
+        <h1 class="text-4xl lg:text-6xl text-white">
+          Tanulmányok és tapasztalat
+        </h1>
       </div>
     </section>
   </main>
@@ -160,8 +236,8 @@ import Layout from "../layouts/Layout.astro";
   };
   function scrollFunction() {
     if (
-      document.body.scrollTop > 20 ||
-      document.documentElement.scrollTop > 20
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
     ) {
       up.style.display = "block";
     } else {
@@ -169,7 +245,7 @@ import Layout from "../layouts/Layout.astro";
     }
   }
   function topFunction() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }
   </script>
 </Layout>
