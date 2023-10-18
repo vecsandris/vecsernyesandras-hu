@@ -9,7 +9,9 @@ module.exports = {
 				elegant: '#dc2626',
 				black: '#000000',
 				elegantGray: '#121212',
-				red: '#DC2626'
+				red: '#DC2626',
+				darkRed: '#781E1E',
+				darkGray:'#272727'
 			},
 			fontFamily:{
 				poppins: ['"Poppins"']
