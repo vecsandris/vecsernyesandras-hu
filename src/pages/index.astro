@@ -279,9 +279,9 @@ import Layout from "../layouts/Layout.astro";
         </h1>
       </div>
       <div
-        class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-24 p-8 justify-items-start reveal"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-24 p-8 justify-items-start"
       >
-        <div class="flex flex-col text-white">
+        <div class="flex flex-col text-white reveal">
           <div class="flex flex-row gap-4 items-center">
             <Icon name="circle-filled" class="h-12 md:h-20" />
             <div class="bg-darkGray rounded-lg h-fit">
@@ -294,7 +294,7 @@ import Layout from "../layouts/Layout.astro";
             fejlődés érdekében.
           </p>
         </div>
-        <div class="flex flex-col text-white">
+        <div class="flex flex-col text-white reveal">
           <div class="flex flex-row gap-4 items-center">
             <Icon name="circle-filled" class="h-12 md:h-20" />
             <div class="bg-darkGray rounded-lg h-fit">
@@ -309,7 +309,7 @@ import Layout from "../layouts/Layout.astro";
             szoftverfejlesztő szakot.
           </p>
         </div>
-        <div class="flex flex-col text-white">
+        <div class="flex flex-col text-white reveal">
           <div class="flex flex-row gap-4 items-center">
             <Icon name="circle-filled" class="h-12 md:h-20" />
             <div class="bg-darkGray rounded-lg h-fit">
@@ -409,14 +409,12 @@ import Layout from "../layouts/Layout.astro";
             <input
               type="text"
               name="name"
-              autocomplete="off"
               placeholder="Név"
               class="bg-darkGray rounded-lg p-2 w-full lg:w-64"
             />
             <input
               type="email"
               name="email"
-              autocomplete="off"
               placeholder="E-mail"
               class="bg-darkGray rounded-lg p-2 w-full lg:w-64"
             />
@@ -425,7 +423,6 @@ import Layout from "../layouts/Layout.astro";
             <input
               type="text"
               name="title"
-              autocomplete="off"
               placeholder="Tárgy"
               class="bg-darkGray rounded-lg p-2 w-full"
             />
