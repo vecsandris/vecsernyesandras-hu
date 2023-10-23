@@ -22,10 +22,14 @@ import Layout from "../layouts/Layout.astro";
       class="hover:text-gray transition-all duration-300 p-2 lg:p-0"
       >Tapasztalat</a
     >
-    <a href="#portfolio" class="hover:text-gray transition-all duration-300 p-2 lg:p-0"
+    <a
+      href="#portfolio"
+      class="hover:text-gray transition-all duration-300 p-2 lg:p-0"
       >Portfólió</a
     >
-    <a href="#kapcsolat" class="hover:text-gray transition-all duration-300 p-2 lg:p-0"
+    <a
+      href="#kapcsolat"
+      class="hover:text-gray transition-all duration-300 p-2 lg:p-0"
       >Kapcsolat</a
     >
   </nav>
@@ -64,7 +68,10 @@ import Layout from "../layouts/Layout.astro";
               class="h-10 transition-all ease-in duration-300 hover:scale-125"
             /></a
           >
-          <a href="mailto:vecsernyesan2002@gmail.com" target="_blank"
+          <a
+            href="mailto:vecsernyesan2002@gmail.com"
+            launch-external="true"
+            target="_blank"
             ><Icon
               name="baseline-email"
               class="h-10 transition-all ease-in duration-300 hover:scale-125"
@@ -80,7 +87,7 @@ import Layout from "../layouts/Layout.astro";
   <main class="bg-elegantGray">
     <section class="p-4 h-auto">
       <div
-        class="flex flex-col items-center justify-center text-center"
+        class="flex flex-col items-center justify-center text-center reveal"
         id="rolam"
       >
         <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">
@@ -91,7 +98,7 @@ import Layout from "../layouts/Layout.astro";
       <div
         class="flex flex-col mt-16 text-white text-center lg:text-left items-center"
       >
-        <p class="text-justify p-4 w-full lg:w-1/2">
+        <p class="text-justify p-4 w-full lg:w-1/2 reveal">
           Sziasztok, Vecsernyés András vagyok! Egy lelkes és kreatív egyéniség
           vagyok, aki mindig nyitott az új kihívásokra és tapasztalatokra. Az
           emberekkel való kapcsolatépítés és az új barátok szerzése fontos
@@ -99,8 +106,8 @@ import Layout from "../layouts/Layout.astro";
           Bízom benne, hogy a jövőben még sok érdekes dolog vár rám, és nagyon
           várom, hogy megosszam tapasztalataimat és gondolataimat másokkal.
         </p>
-        <h1 class="text-2xl lg:text-4xl mt-16">Személyes adatok</h1>
-        <div class="flex flex-row mt-8 gap-1 lg:gap-16 text-sm lg:text-lg">
+        <h1 class="text-2xl lg:text-4xl mt-16 reveal">Személyes adatok</h1>
+        <div class="flex flex-row mt-8 gap-1 lg:gap-16 text-sm lg:text-lg reveal">
           <table>
             <tr class="leading-normal lg:leading-loose">
               <td class="text-gray">Keresztnév:</td>
@@ -133,115 +140,137 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
     <section class="p-8 mt-20 h-screen" id="kepessegek">
-      <div class="flex flex-col items-center justify-center text-center">
+      <div class="flex flex-col items-center justify-center text-center reveal">
         <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">
           Képességek
         </h1>
         <h1 class="text-4xl lg:text-6xl text-white">Képességek</h1>
       </div>
-      <div
-        class="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16 text-white p-8 justify-items-center"
-      >
-        <div class="text-center rounded-full">
-          <div
-            class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4 shadow-lg shadow-red"
-          >
-            <div
-              class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center"
-            >
-              <p class="text-lg lg:text-2xl">40%</p>
-            </div>
-          </div>
-          <p class="text-lg lg:text-2xl mt-5">CSS</p>
+      <div class="text-white">
+        <div class="flex flex-col items-center mt-20 reveal">
+          <h1 class="text-5xl">Frontend</h1>
         </div>
-        <div class="flex flex-col text-center">
-          <div
-            class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4 shadow-lg shadow-red"
-          >
+        <div
+          class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-white p-8 justify-items-center reveal"
+        >
+          <div class="text-center rounded-full">
             <div
-              class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center"
+              class="rounded-full bg-red w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 p-4"
             >
-              <p class="text-lg lg:text-2xl">50%</p>
+              <div
+                class="flex absolute bg-black h-16 md:h-24 lg:h-32 w-16 md:w-24 lg:w-32 rounded-full text-center items-center justify-center"
+              >
+                <p class="text-sm md:text-lg lg:text-2xl">REACT</p>
+              </div>
             </div>
           </div>
-          <p class="text-lg lg:text-2xl mt-5">REACT</p>
+          <div class="flex text-center">
+            <div
+              class="rounded-full bg-red w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 p-4"
+            >
+              <div
+                class="flex absolute bg-black h-16 md:h-24 lg:h-32 w-16 md:w-24 lg:w-32 rounded-full text-center items-center justify-center"
+              >
+                <p class="text-sm md:text-lg lg:text-2xl">ASTRO</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex text-center">
+            <div
+              class="rounded-full bg-red w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 p-4"
+            >
+              <div
+                class="flex absolute bg-black h-16 md:h-24 lg:h-32 w-16 md:w-24 lg:w-32 rounded-full text-center items-center justify-center"
+              >
+                <p class="text-sm md:text-lg lg:text-2xl">Tailwind CSS</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex text-center">
+            <div
+              class="rounded-full bg-red w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 p-4"
+            >
+              <div
+                class="flex absolute bg-black h-16 md:h-24 lg:h-32 w-16 md:w-24 lg:w-32 rounded-full text-center items-center justify-center"
+              >
+                <p class="text-sm md:text-lg lg:text-2xl">Bootstrap</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col text-center">
-          <div
-            class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4 shadow-lg shadow-red"
-          >
-            <div
-              class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center"
-            >
-              <p class="text-lg lg:text-2xl">50%</p>
-            </div>
-          </div>
-          <p class="text-lg lg:text-2xl mt-5">ASTRO</p>
+        <div class="flex flex-col items-center reveal">
+          <h1 class="text-5xl">Databases</h1>
         </div>
-        <div class="flex flex-col text-center">
-          <div
-            class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4 shadow-lg shadow-red"
-          >
+        <div
+          class="grid grid-cols-2 lg:grid-cols-2 gap-8 text-white p-8 justify-items-center reveal"
+        >
+          <div class="flex text-center">
             <div
-              class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center"
+              class="rounded-full bg-red w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 p-4"
             >
-              <p class="text-lg lg:text-2xl">50%</p>
+              <div
+                class="flex absolute bg-black h-16 md:h-24 lg:h-32 w-16 md:w-24 lg:w-32 rounded-full text-center items-center justify-center"
+              >
+                <p class="text-md lg:text-2xl">Mysql</p>
+              </div>
             </div>
           </div>
-          <p class="text-lg lg:text-2xl mt-5">Tailwind CSS</p>
+          <div class="flex text-center">
+            <div
+              class="rounded-full bg-red w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 p-4"
+            >
+              <div
+                class="flex absolute bg-black h-16 md:h-24 lg:h-32 w-16 md:w-24 lg:w-32 rounded-full text-center items-center justify-center"
+              >
+                <p class="text-sm md:text-lg lg:text-2xl">MongoDB</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col text-center">
-          <div
-            class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4 shadow-lg shadow-red"
-          >
-            <div
-              class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center"
-            >
-              <p class="text-lg lg:text-2xl">90%</p>
-            </div>
-          </div>
-          <p class="text-lg lg:text-2xl mt-5">Github</p>
+        <div class="flex flex-col items-center reveal">
+          <h1 class="text-5xl">Miscelanius</h1>
         </div>
-        <div class="flex flex-col text-center">
-          <div
-            class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4 shadow-lg shadow-red"
-          >
+        <div
+          class="grid grid-cols-2 lg:grid-cols-3 gap-8 text-white p-8 justify-items-center reveal"
+        >
+          <div class="flex text-center">
             <div
-              class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center"
+              class="rounded-full bg-red w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 p-4"
             >
-              <p class="text-lg lg:text-2xl">90%</p>
+              <div
+                class="flex absolute bg-black h-16 md:h-24 lg:h-32 w-16 md:w-24 lg:w-32 rounded-full text-center items-center justify-center"
+              >
+                <p class="text-sm md:text-lg lg:text-2xl">Github</p>
+              </div>
             </div>
           </div>
-          <p class="text-lg lg:text-2xl mt-5">Mysql</p>
-        </div>
-        <div class="flex flex-col text-center">
-          <div
-            class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4 shadow-lg shadow-red"
-          >
+          <div class="flex text-center">
             <div
-              class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center"
+              class="rounded-full bg-red w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 p-4"
             >
-              <p class="text-lg lg:text-2xl">60%</p>
+              <div
+                class="flex absolute bg-black h-16 md:h-24 lg:h-32 w-16 md:w-24 lg:w-32 rounded-full text-center items-center justify-center"
+              >
+                <p class="text-sm md:text-lg lg:text-2xl">Figma</p>
+              </div>
             </div>
           </div>
-          <p class="text-lg lg:text-2xl mt-5">MongoDB</p>
-        </div>
-        <div class="flex flex-col text-center">
-          <div
-            class="rounded-full bg-red w-24 lg:w-40 h-24 lg:h-40 p-4 shadow-lg shadow-red"
-          >
+          <div class="flex text-center">
             <div
-              class="flex absolute bg-black h-16 lg:h-32 w-16 lg:w-32 rounded-full text-center items-center justify-center"
+              class="rounded-full bg-red w-24 md:w-32 lg:w-40 h-24 md:h-32 lg:h-40 p-4"
             >
-              <p class="text-lg lg:text-2xl">70%</p>
+              <div
+                class="flex absolute bg-black h-16 md:h-24 lg:h-32 w-16 md:w-24 lg:w-32 rounded-full text-center items-center justify-center"
+              >
+                <p class="text-sm md:text-lg lg:text-2xl">Trello</p>
+              </div>
             </div>
           </div>
-          <p class="text-lg lg:text-2xl mt-5">Figma</p>
         </div>
       </div>
     </section>
-    <section class="p-8 mt-52 lg:mt-20 h-screen" id="tapasztalat">
-      <div class="flex flex-col items-center justify-center text-center">
+    <section class="p-8 mt-80 lg:mt-96 h-screen" id="tapasztalat">
+      <div class="flex flex-col items-center justify-center text-center reveal">
         <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">
           Tanulmányok és tapasztalat
         </h1>
@@ -250,58 +279,60 @@ import Layout from "../layouts/Layout.astro";
         </h1>
       </div>
       <div
-        class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-24 p-8 justify-items-center"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-24 p-8 justify-items-start reveal"
       >
         <div class="flex flex-col text-white">
           <div class="flex flex-row gap-4 items-center">
-            <Icon name="circle-filled" class="h-12" />
+            <Icon name="circle-filled" class="h-12 md:h-20" />
             <div class="bg-darkGray rounded-lg h-fit">
-              <p class="text-sm p-1">2021-2023</p>
+              <p class="text-sm md:text-xl p-1">2023-jelen</p>
             </div>
           </div>
-          <p class="font-bold">Szoftverfejlesztő és tesztelő felnőttképzés</p>
-          <p class="text-xs text-gray">
-            Elvégeztem a Szily Kálmán Szakgmináziumában 2 év alatt a
-            szoftverfejlesztő szakot.
-          </p>
-        </div>
-        <div class="flex flex-col text-white">
-          <div class="flex flex-row gap-4 items-center">
-            <Icon name="circle-filled" class="h-12" />
-            <div class="bg-darkGray rounded-lg h-fit">
-              <p class="text-sm p-1">2023-jelen</p>
-            </div>
-          </div>
-          <p class="font-bold">Szabadúszó</p>
-          <p class="text-xs text-gray">
+          <p class="font-bold text-2xl">Szabadúszó</p>
+          <p class="text-xs md:text-lg text-gray w-10/12">
             Szabadúszóként dolgozom, keresem a kihivást jelentő projekteket a
             fejlődés érdekében.
           </p>
         </div>
         <div class="flex flex-col text-white">
           <div class="flex flex-row gap-4 items-center">
-            <Icon name="circle-filled" class="h-12" />
+            <Icon name="circle-filled" class="h-12 md:h-20" />
             <div class="bg-darkGray rounded-lg h-fit">
-              <p class="text-sm p-1">2017-2021</p>
+              <p class="text-sm md:text-xl p-1">2021-2023</p>
             </div>
           </div>
-          <p class="font-bold">Rendszerkarbantartó</p>
-          <p class="text-xs text-gray">
+          <p class="font-bold text-2xl">
+            Szoftverfejlesztő és tesztelő felnőttképzés
+          </p>
+          <p class="text-xs md:text-lg text-gray w-10/12">
+            Elvégeztem a Szily Kálmán Szakgmináziumában 2 év alatt a
+            szoftverfejlesztő szakot.
+          </p>
+        </div>
+        <div class="flex flex-col text-white">
+          <div class="flex flex-row gap-4 items-center">
+            <Icon name="circle-filled" class="h-12 md:h-20" />
+            <div class="bg-darkGray rounded-lg h-fit">
+              <p class="text-sm md:text-xl p-1">2017-2021</p>
+            </div>
+          </div>
+          <p class="font-bold text-2xl">Rendszerkarbantartó</p>
+          <p class="text-xs md:text-lg text-gray w-10/12">
             A Szily Kálmán Szakgimnáziumban megszereztem a rendszerkarbantartó
             szakot és az érettségit.
           </p>
         </div>
       </div>
     </section>
-    <section class="p-8 h-screen mt-20 lg:mt-0" id="portfolio">
-      <div class="flex flex-col items-center justify-center text-center">
+    <section class="p-8 h-screen mt-40 lg:mt-0" id="portfolio">
+      <div class="flex flex-col items-center justify-center text-center reveal">
         <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">
           Portfolió
         </h1>
         <h1 class="text-4xl lg:text-6xl text-white">Portfolió</h1>
       </div>
       <div
-        class="flex flex-col lg:flex-row mt-24 items-center gap-16 justify-center"
+        class="flex flex-col lg:flex-row mt-24 items-center gap-16 justify-center reveal"
       >
         <a href="https://elektrotok.hu/" class="" target="_blank"
           ><img
@@ -323,30 +354,32 @@ import Layout from "../layouts/Layout.astro";
     </section>
   </main>
   <footer class="bg-elegantGray p-8 h-fit" id="kapcsolat">
-    <div class="flex flex-col items-center justify-center text-center">
+    <div class="flex flex-col items-center justify-center text-center reveal">
       <h1 class="absolute text-5xl lg:text-8xl text-gray opacity-20">
         Kapcsolat
       </h1>
       <h1 class="text-4xl lg:text-6xl text-white">Kapcsolat</h1>
     </div>
-    <div class="flex flex-col lg:flex-row text-center lg:text-left text-white p-4 lg:p-16 mt-20">
+    <div
+      class="flex flex-col lg:flex-row text-center lg:text-left text-white p-4 lg:p-16 mt-20"
+    >
       <div class="flex flex-col items-center lg:items-start gap-4">
-        <h1 class="text-3xl">Ne félj megkeresni!</h1>
-        <p class="text-gray w-full lg:w-1/2">
+        <h1 class="text-3xl reveal">Ne félj megkeresni!</h1>
+        <p class="text-gray w-full lg:w-1/2 reveal">
           Nyitott vagyok bármilyen projektre, nem riasztanak el a kreativ
           ötletek, illetve hogy részese legyek egy új helyzetnek.
         </p>
-        <div class="flex flex-col items-center lg:items-start mt-5 gap-4">
+        <div class="flex flex-col items-center lg:items-start mt-5 gap-4 reveal">
           <div class="flex flex-row items-center gap-4">
             <Icon name="baseline-email" class="h-6 lg:h-12 w-8 lg:w-6" />
             <p class="text-xl">vecsernyesan2002@gmail.com</p>
           </div>
           <div class="flex flex-row items-center gap-4">
-            <Icon name="baseline-phone" class="h-8 lg:h-12 w-8 lg:w-8"/>
+            <Icon name="baseline-phone" class="h-8 lg:h-12 w-8 lg:w-8" />
             <p class="text-xl">+36 20 960 7403</p>
           </div>
         </div>
-        <div class="flex flex-row gap-6 text-gray">
+        <div class="flex flex-row gap-6 text-gray reveal">
           <a href="https://www.facebook.com/andras.vecsernyes/" target="_blank"
             ><Icon
               name="baseline-facebook"
@@ -359,7 +392,10 @@ import Layout from "../layouts/Layout.astro";
               class="h-10 transition-all ease-in duration-300 hover:scale-125"
             /></a
           >
-          <a href="mailto:vecsernyesan2002@gmail.com" target="_blank"
+          <a
+            href="mailto:vecsernyesan2002@gmail.com"
+            launch-external="true"
+            target="_blank"
             ><Icon
               name="baseline-email"
               class="h-10 transition-all ease-in duration-300 hover:scale-125"
@@ -367,7 +403,7 @@ import Layout from "../layouts/Layout.astro";
           >
         </div>
       </div>
-      <div class="flex flex-col text-white mt-20 lg:mt-0">
+      <div class="flex flex-col text-white mt-20 lg:mt-0 reveal">
         <form action="" method="post">
           <div class="flex flex-col lg:flex-row gap-4">
             <input
@@ -399,10 +435,14 @@ import Layout from "../layouts/Layout.astro";
               name="description"
               placeholder="Üzenet"
               class="resize-none bg-darkGray rounded-lg p-2 w-full h-72"
-            />
+            ></textarea>
           </div>
           <div class="mt-5">
-            <button type="submit" class="transition-all ease-in duration-300 hover:bg-darkRed bg-red p-4 rounded-lg w-full lg:w-52">Küldés</button>
+            <button
+              type="submit"
+              class="transition-all ease-in duration-300 hover:bg-darkRed bg-red p-4 rounded-lg w-full lg:w-52"
+              >Küldés</button
+            >
           </div>
         </form>
       </div>
@@ -414,21 +454,21 @@ import Layout from "../layouts/Layout.astro";
   </footer>
 
   <script is:inline>
-    //menu functions start here
-    let isMenuOpen = false;
-    function Menu(e) {
-      let list = document.querySelector("nav");
-      isMenuOpen
-        ? ((e.name = "menu-outline"),
-          list.classList.remove("top-[80px]"),
-          list.classList.remove("opacity-100"))
-        : ((e.name = "close"),
-          list.classList.add("top-[80px]"),
-          list.classList.add("opacity-100"));
-      isMenuOpen = !isMenuOpen;
-    }
-    document
-      .querySelector("[data-component='menu']")
+  //menu functions start here
+  let isMenuOpen = false;
+  function Menu(e) {
+    let list = document.querySelector("nav");
+    isMenuOpen
+      ? ((e.name = "menu-outline"),
+        list.classList.remove("top-[80px]"),
+        list.classList.remove("opacity-100"))
+      : ((e.name = "close"),
+        list.classList.add("top-[80px]"),
+        list.classList.add("opacity-100"));
+    isMenuOpen = !isMenuOpen;
+  }
+  document
+        .querySelector("[data-component='menu']")
       .addEventListener("click", function () {
         Menu(this);
       });
@@ -450,5 +490,33 @@ import Layout from "../layouts/Layout.astro";
     function topFunction() {
       window.scrollTo(0, 0);
     }
+    function reveal(){
+      var reveals = document.querySelectorAll(".reveal");
+
+      for(var i = 0; i < reveals.length; i++){
+        var windowHeight = window.innerHeight;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 1;
+
+        if(revealTop < windowHeight - revealPoint){
+          reveals[i].classList.add('active');
+        }else{
+          reveals[i].classList.remove('active');
+        }
+      }
+    }
+    window.addEventListener('scroll', reveal);
   </script>
+  <style>
+    .reveal{
+      position: relative;
+      transform: translateY(150px);
+      opacity: 0;
+    }
+    .reveal.active{
+      transform: translateY(0px);
+      opacity: 1;
+      transition: 1s;
+    }
+  </style>
 </Layout>
