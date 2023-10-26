@@ -24,7 +24,7 @@ if (Astro.request.method === 'POST') {
       text: `from:${email}(${name})\nsubject:${subject}\n${message}`,
     }
     await sendGrid.send(msg).then(() => {
-      alert('Email elküldve')
+      console.log("work")
     }).catch((error) => {
       console.error(error)
     });
