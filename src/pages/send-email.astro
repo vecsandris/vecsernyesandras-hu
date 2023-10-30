@@ -1,0 +1,56 @@
+---
+import Layout from "../layouts/Layout.astro";
+import sendGrid from "@sendgrid/mail";
+sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
+
+if (Astro.request.method === "POST") {
+  try {
+    // Getting posted data from our contact form
+    const data = await Astro.request.formData();
+    const name = data.get("name");
+    const email = data.get("email");
+    const message = data.get("message");
+    const subject = data.get("subject");
+    // TODO: Do not forget to do validation and error handling over received data from your contact form.
+
+    // Sending email
+    const msg = {
+      to: "vecsernyesan2002@gmail.com", // Change to your recipient
+      from: "info@vecsernyesandras.hu", // Change to your verified sender
+      replyTo: { email: email, name: name },
+      subject: `Contact form submission from ${name}`,
+      text: `from:${email}(${name})\nsubject:${subject}\n${message}`,
+    };
+    await sendGrid
+      .send(msg)
+      .then(() => {
+        console.log("work");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  } catch (error) {
+    console.error(error);
+  }
+}
+---
+
+<Layout title="Email elküldve!">
+    <section class="h-screen overflow-hidden bg-elegantGray">
+        <div class="flex flex-col items-center justify-center h-screen">
+            <div id="toast-success" class="flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+                <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                    </svg>
+                    <span class="sr-only">Check icon</span>
+                </div>
+                <div class="ml-3 text-sm font-normal">Email elküldve!</div>
+            </div>
+            <a
+              href="/"
+              class="transition-all ease-in duration-300 hover:bg-darkRed bg-red p-4 rounded-lg w-52"
+              >Vissza a kezdőoldalra!</a>
+        </div>
+    </section>
+</Layout>
