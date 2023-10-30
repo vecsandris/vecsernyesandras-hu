@@ -452,19 +452,21 @@ if (Astro.request.method === "POST") {
         </div>
       </div>
       <div class="flex flex-col text-white mt-20 lg:mt-0 reveal">
-        <form action="/" method="post">
+        <form action="/send-email" method="post">
           <div class="flex flex-col lg:flex-row gap-4">
             <input
               type="text"
               name="name"
               placeholder="Név"
               class="bg-darkGray rounded-lg p-2 w-full lg:w-64"
+              required
             />
             <input
               type="email"
               name="email"
               placeholder="E-mail"
               class="bg-darkGray rounded-lg p-2 w-full lg:w-64"
+              required
             />
           </div>
           <div class="mt-5">
@@ -473,6 +475,7 @@ if (Astro.request.method === "POST") {
               name="subject"
               placeholder="Tárgy"
               class="bg-darkGray rounded-lg p-2 w-full"
+              required
             />
           </div>
           <div class="mt-5">
