@@ -2,33 +2,35 @@
 import { Icon } from "astro-icon";
 import Layout from "../layouts/Layout.astro";
 
-import sendGrid from '@sendgrid/mail';
-sendGrid.setApiKey( import.meta.env.SENDGRID_API_KEY );
+import sendGrid from "@sendgrid/mail";
+sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
 
-if (Astro.request.method === 'POST') {
-  try{
+if (Astro.request.method === "POST") {
+  try {
     // Getting posted data from our contact form
     const data = await Astro.request.formData();
-    const name = data.get('name');
-    const email = data.get('email');
-    const message = data.get('message');
-    const subject = data.get('subject');
+    const name = data.get("name");
+    const email = data.get("email");
+    const message = data.get("message");
+    const subject = data.get("subject");
     // TODO: Do not forget to do validation and error handling over received data from your contact form.
 
     // Sending email
     const msg = {
-      to: 'vecsernyesan2002@gmail.com', // Change to your recipient
-      from: 'info@vecsernyesandras.hu', // Change to your verified sender
-      replyTo: {email:email, name:name},
+      to: "vecsernyesan2002@gmail.com", // Change to your recipient
+      from: "info@vecsernyesandras.hu", // Change to your verified sender
+      replyTo: { email: email, name: name },
       subject: `Contact form submission from ${name}`,
       text: `from:${email}(${name})\nsubject:${subject}\n${message}`,
-    }
-    await sendGrid.send(msg).then(() => {
-      console.log("work")
-    }).catch((error) => {
-      console.error(error)
-    });
-
+    };
+    await sendGrid
+      .send(msg)
+      .then(() => {
+        console.log("work");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   } catch (error) {
     console.error(error);
   }
@@ -56,8 +58,7 @@ if (Astro.request.method === 'POST') {
     >
     <a
       href="#portfolio"
-      class="hover:text-gray transition-all duration-300 p-2 lg:p-0"
-      >Munkáim</a
+      class="hover:text-gray transition-all duration-300 p-2 lg:p-0">Munkáim</a
     >
     <a
       href="#kapcsolat"
@@ -112,7 +113,7 @@ if (Astro.request.method === 'POST') {
         </div>
       </div>
       <div class="flex flex-col items-end p-8">
-        <a href=""><Icon name="up-c" id="up" class="h-10 fixed lg:ml-10"/></a>
+        <a href=""><Icon name="up-c" id="up" class="h-10 fixed lg:ml-10" /></a>
       </div>
     </div>
   </header>
@@ -139,7 +140,9 @@ if (Astro.request.method === 'POST') {
           várom, hogy megosszam tapasztalataimat és gondolataimat másokkal.
         </p>
         <h1 class="text-2xl lg:text-4xl mt-16 reveal">Személyes adatok</h1>
-        <div class="flex flex-row mt-8 gap-1 lg:gap-16 text-sm lg:text-lg reveal">
+        <div
+          class="flex flex-row mt-8 gap-1 lg:gap-16 text-sm lg:text-lg reveal"
+        >
           <table>
             <tr class="leading-normal lg:leading-loose">
               <td class="text-gray">Keresztnév:</td>
@@ -412,7 +415,9 @@ if (Astro.request.method === 'POST') {
           Nyitott vagyok bármilyen projektre, nem riasztanak el a kreativ
           ötletek, illetve hogy részese legyek egy új helyzetnek.
         </p>
-        <div class="flex flex-col items-center lg:items-start mt-5 gap-4 reveal">
+        <div
+          class="flex flex-col items-center lg:items-start mt-5 gap-4 reveal"
+        >
           <div class="flex flex-row items-center gap-4">
             <Icon name="baseline-email" class="h-6 lg:h-12 w-8 lg:w-6" />
             <p class="text-xl">vecsernyesan2002@gmail.com</p>
@@ -507,54 +512,54 @@ if (Astro.request.method === 'POST') {
     isMenuOpen = !isMenuOpen;
   }
   document
-        .querySelector("[data-component='menu']")
-      .addEventListener("click", function () {
-        Menu(this);
-      });
-    //scroll functions start here
-    let up = document.getElementById("up");
-    window.onscroll = function () {
-      scrollFunction();
-    };
-    function scrollFunction() {
-      if (
-        document.body.scrollTop > 50 ||
-        document.documentElement.scrollTop > 50
-      ) {
-        up.style.display = "block";
+    .querySelector("[data-component='menu']")
+    .addEventListener("click", function () {
+      Menu(this);
+    });
+  //scroll functions start here
+  let up = document.getElementById("up");
+  window.onscroll = function () {
+    scrollFunction();
+  };
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      up.style.display = "block";
+    } else {
+      up.style.display = "none";
+    }
+  }
+  function topFunction() {
+    window.scrollTo(0, 0);
+  }
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var revealTop = reveals[i].getBoundingClientRect().top;
+      var revealPoint = 1;
+
+      if (revealTop < windowHeight - revealPoint) {
+        reveals[i].classList.add("active");
       } else {
-        up.style.display = "none";
+        reveals[i].classList.remove("active");
       }
     }
-    function topFunction() {
-      window.scrollTo(0, 0);
-    }
-    function reveal(){
-      var reveals = document.querySelectorAll(".reveal");
+  }
+  window.addEventListener("scroll", reveal);
 
-      for(var i = 0; i < reveals.length; i++){
-        var windowHeight = window.innerHeight;
-        var revealTop = reveals[i].getBoundingClientRect().top;
-        var revealPoint = 1;
-
-        if(revealTop < windowHeight - revealPoint){
-          reveals[i].classList.add('active');
-        }else{
-          reveals[i].classList.remove('active');
-        }
-      }
-    }
-    window.addEventListener('scroll', reveal);
-
-    //here is the email sending
+  //here is the email sending
   </script>
   <style>
-    .reveal{
+    .reveal {
       position: relative;
       transform: translateY(150px);
       opacity: 0;
     }
-    .reveal.active{
+    .reveal.active {
       transform: translateY(0px);
       opacity: 1;
       transition: 1s;
